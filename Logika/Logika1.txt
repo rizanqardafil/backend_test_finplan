@@ -1,0 +1,21 @@
+def generate_sequence(N):
+    sequence = []
+    count = 0
+    num = 0
+    
+    while count < N:
+        num += 1
+        if num % 3 == 0 or num % 7 == 0:
+            sequence.append('Z')
+        else:
+            sequence.append(num)
+        count += 1
+    
+    return sequence
+
+N = int(input("N : "))
+output = generate_sequence(N)
+print(output)
+
+#Cara Menjalankan
+#Running di Code Editor Pastika Sudah Support Bahasa Python

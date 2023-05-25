@@ -1,0 +1,5 @@
+SELECT users.name AS name_user, COUNT(*) AS total
+FROM users
+JOIN map_user_hobby ON users.id = map_user_hobby.id_user
+WHERE users.status = 'active' AND map_user_hobby.status = 'active'
+GROUP BY users.name;

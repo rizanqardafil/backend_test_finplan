@@ -1,0 +1,6 @@
+SELECT users.name, AVG(hobbies.level) AS level_avg
+FROM users
+JOIN map_user_hobby ON users.id = map_user_hobby.id_user
+JOIN hobbies ON map_user_hobby.id_hobby = hobbies.id
+GROUP BY users.id, users.name
+HAVING COUNT(*) > 1;

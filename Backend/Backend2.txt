@@ -1,0 +1,16 @@
+SELECT users.gender, COUNT(*) AS total
+FROM users
+JOIN map_user_hobby ON users.id = map_user_hobby.id_user
+JOIN hobbies ON map_user_hobby.id_hobby = hobbies.id
+WHERE hobbies.name = 'Skipping'
+GROUP BY users.gender;
+
+
+harusnya hasilnya
+F = 2 
+M = 5
+
+Bukan F = 1
+M = 5
+
+Karena dari data jumlah yang hobbi Skipping berjumlah 7 orang
